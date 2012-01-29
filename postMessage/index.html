@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Post Message</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="jquery-latest.js" type="text/javascript"></script>
+    <script language="javascript">
+        window.onload = function () {
+            win = document.getElementById("ifrPartner").contentWindow;
+            frm = document.getElementById("frmPost");
+
+            frm.onsubmit = function (e) {
+                msg = document.getElementById("txtMessage").value;
+                //win.postMessage(msg, "http://localhost:81/");
+		        win.postMessage(msg, "*");
+                e.preventDefault();
+            };
+        };
+
+        
+    </script>
+</head>
+<body>
+
+<iframe id="ifrPartner" src="http://localhost:81/"></iframe>
+
+    <form id="frmPost">
+    <input type="text" id="txtMessage" value="Hello partner!" />
+    <input type="submit" value="Submit" id="btnSubmit" />
+    
+    </form>
+</body>
+</html>

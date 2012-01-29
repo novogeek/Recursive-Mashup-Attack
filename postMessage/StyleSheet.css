@@ -1,0 +1,14 @@
+﻿fieldset 
+{
+    margin-top: 30px;
+    padding: 20px;
+    width: 400px;
+}
+
+.container
+{
+    border: solid 1px #cdcdcd;
+    margin: 10px 0px 0px 0px;
+    padding: 20px;    
+    
+}

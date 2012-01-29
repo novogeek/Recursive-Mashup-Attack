@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attacker's Website</title>
+<script language="javascript" type="text/javascript">
+    window.onload = function () {
+        var ifrAttacker = document.getElementById("ifrAttacker");
+        var ifrPartner = ifrAttacker.contentWindow.document.getElementById("ifrPartner");
+        ifrPartner.src = "http://localhost:1337/gadget.html"
+        //ifrPartner.location.href = "http://localhost:1337/gadget.html"
+    }
+</script>
+</head>
+
+<body>
+<h3> Attacker site!</h3>
+<iframe id="ifrAttacker" width="400px" height="400px" src="http://localhost/postMessage/index.html"></iframe>
+
+<!--
+<fieldset>
+    <legend>Window Attacks Test!</legend>
+    <iframe id="ifrGadget2" src="gadget2.html"></iframe>
+    <iframe id="ifrGadget3" src="http://localhost:81/"></iframe>
+</fieldset>
+-->
+</body>
+</html>
