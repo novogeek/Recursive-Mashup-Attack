@@ -1,4 +1,8 @@
-﻿fieldset 
+﻿body{
+	background-color:#819FF7;
+}
+
+fieldset 
 {
     margin-top: 30px;
     padding: 20px;
@@ -12,3 +16,4 @@
     padding: 20px;    
     
 }
+
