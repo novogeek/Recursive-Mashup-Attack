@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Partner Website</title>
+<style>
+body{background-color: #CEE3F6;}
+</style>
+
+<script language="javascript" type="text/javascript">
+    window.onload = function () {
+        window.onmessage = function (e) {
+            if (e.origin == 'http://localhost:3000') {
+                document.getElementById("spanMessage").innerHTML = e.data;
+            }else{
+				console.log("Someone is trying to mess!");
+			}
+        };
+	window.name="Cross origin message!";
+
+    }
+</script>
+</head>
+
+<body>
+<h3> Partner website </h3>
+<p>This page is located at http://localhost:3000/ </p>
+<span>Host's message: </span><span id="spanMessage"> </span>
+</body>
+</html>

