@@ -10,5 +10,5 @@ Setup: There are 3 folders-partner, postMessage and attacker. Host each of them 
 
 This particular framing attack is called "Recursive Mashup attack". To prevent this attack, make sure your site uses frame busting techniques like JavaScript redirection or sending X-Frame-Options response header.
 
-###EDIT (8/3/2014):
+###UPDATE (8/3/2014):
 Check the [nodeJs branch](https://github.com/novogeek/Recursive-Mashup-Attack/tree/nodeJs) of this repo for NodeJs version. Thanks to Node., running cross origin demos is easier as we can run 2 servers on different ports programmatically.
