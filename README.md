@@ -11,4 +11,5 @@
 	node app.js
 	```
 
-1. [Open http://localhost:3100/](http://localhost:3100/)
+1. Open [http://localhost:3000/](http://localhost:3000/) for simple postMessage demo.
+1. Open [http://localhost:3100/attackerParent](http://localhost:3100/attackerParent) for recursive mashup attack demo.
